@@ -1,0 +1,186 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style":{
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style":{
+				"navigationBarTitleText": "分类",
+				"navigationBarBackgroundColor":"#fff",
+				"navigationBarTextStyle":"black"
+			}
+		},
+		{
+			"path": "pages/exlist/exlist",
+			"style":{
+				"navigationBarTitleText": "我能兑换"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style":{
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor":"#547EF7"
+			}
+		},
+		{
+			"path": "pages/shopredeem/shopredeem",
+			"style":{
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/payment/payment",
+			"style":{
+				"navigationBarTitleText": "确认订单"
+			}
+		},
+		{
+			"path": "pages/exrecord/exrecord",
+			"style":{
+				"navigationBarTitleText": "兑换记录"
+			}
+		},
+		{
+			"path": "pages/integralog/ingetralog",
+			"style":{
+				"navigationBarTitleText": "积分日志"
+			}
+		},
+		{
+			"path": "pages/mycollection/mycollection",
+			"style":{
+				"navigationBarTitleText": "我的收藏"
+			}
+		},
+		{
+			"path": "pages/myorder/myorder",
+			"style":{
+				"navigationBarTitleText": "我的订单"
+			}
+		},
+		{
+			"path": "pages/brandarea/brandarea",
+			"style":{
+				"navigationBarTitleText": "品牌专区"
+			}
+		},
+		{
+			"path": "pages/noticelist/noticelist",
+			"style":{
+				"navigationBarTitleText": "公告列表"
+			}
+		},
+		{
+			"path": "pages/noticedetails/noticedetails",
+			"style":{
+				"navigationBarTitleText": "公告详情"
+			}
+		},
+		{
+			"path": "pages/details/details",
+			"style":{
+				"navigationBarTitleText": "商品详情",
+				"navigationBarBackgroundColor":"#F7F7F7",
+				"navigationBarTextStyle":"black"
+			}
+		},
+		{
+			"path": "pages/orderdetails/orderdetails",
+			"style":{
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/myaddress/myaddress",
+			"style":{
+				"navigationBarTitleText": "我的地址"
+			}
+		},
+		{
+			"path": "pages/editaddress/editaddress",
+			"style":{
+				"navigationBarTitleText": "编辑收货地址"
+			}
+		},
+		{
+			"path": "pages/newaddress/newaddress",
+			"style":{
+				"navigationBarTitleText": "新增收货地址"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style":{
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style":{
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/forgetpass/forgetpass",
+			"style":{
+				"navigationBarTitleText": "忘记密码"
+			}
+		},
+		{
+			"path": "pages/changepass/changepass",
+			"style":{
+				"navigationBarTitleText": "修改密码"
+			}
+		}
+	],
+	"tabBar":{
+			"color": "#333333",
+			"selectedColor": "#FFD053",
+			"backgroundColor": "#ffffff",
+			"borderStyle":"white",
+			"height":"98px",
+			"fontSize":"20px",
+			"iconWidth":"50px",
+			"list":[{
+				"pagePath":"pages/index/index",
+				"text":"首页",
+				"iconPath": "/static/image/home.png",
+				"selectedIconPath": "/static/image/home-1.png"
+			},
+			{
+				"pagePath":"pages/category/category",
+				"text":"分类",
+				"iconPath": "/static/image/category.png",
+				"selectedIconPath": "/static/image/category-1.png"
+			},
+			{
+				"pagePath":"pages/exlist/exlist",
+				"text":"兑换列表",
+				"iconPath": "/static/image/exlist.png",
+				"selectedIconPath": "/static/image/exlist-1.png"
+			},
+			{
+				"pagePath":"pages/shopredeem/shopredeem",
+				"text":"购物车",
+				"iconPath": "/static/image/shopcart.png",
+				"selectedIconPath": "/static/image/shopcart-1.png"
+			},
+			{
+				"pagePath":"pages/my/my",
+				"text":"我的",
+				"iconPath": "/static/image/my.png",
+				"selectedIconPath": "/static/image/my-1.png"
+			}
+			]
+		},
+	"globalStyle": {
+		"navigationStyle":"default",
+		"navigationBarBackgroundColor":"#6462F4",
+		"navigationBarTextStyle":"white"
+	}
+}

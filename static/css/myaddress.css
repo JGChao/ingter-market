@@ -1,0 +1,180 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #F7F7F7;
+}
+
+.scroll{
+	width: 100%;
+	height: auto;
+	background: #F7F7F7;
+	overflow: auto;
+	padding-bottom: 5rpx;
+}
+text{
+	display: block;
+}
+
+
+/* reslist */
+.reslist {
+	width: 690rpx;
+	margin: 30rpx auto 0 auto;
+	padding: 40rpx 0 40rpx 40rpx;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 10rpx;
+	box-shadow: 0 0 10rpx 2rpx #E7E7E7;
+	overflow: hidden;
+	overflow: auto;
+}
+.reslist::-webkit-scrollbar{
+	display: none;
+}
+.reslist .restlistscroll {
+	width: 710rpx;
+	height: 120rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* zuo */
+.reslist .restlistscroll .ihome{
+	width: 108rpx;
+	height: 120rpx;
+	border-right: 1rpx solid #5E5FF7;
+	padding-top: 25rpx;
+	box-sizing: border-box;
+}
+.reslist .restlistscroll .ihome image{
+	width: 67rpx;
+	height: 70rpx;	
+}
+/* zhong */
+.reslist .restlistscroll .detcons{
+	width:466rpx;
+	height: 120rpx;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.reslist .restlistscroll .detcons .uinfor{
+	font-size: 26rpx;
+	color: #333;
+	margin-left: 40rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.reslist .restlistscroll .detcons .uinfor:first-child{
+	font-size: 30rpx;
+	font-weight: bold;
+}
+
+/* you */
+.reslist .restlistscroll .imore{
+	width: 76rpx;
+	height: 120rpx;
+	padding-top: 40rpx;
+	box-sizing: border-box;
+}
+.reslist .restlistscroll .imore image{
+	width: 40rpx;
+	height: 40rpx;
+}
+/* uremove */
+.reslist .restlistscroll .uremove{
+	width: 60rpx;
+	height: 30rpx;
+}
+.reslist .restlistscroll .uremove image{
+	display: block;
+	width: 27rpx;
+	height: 30rpx;
+	margin: auto;
+}
+/* zhuangshi */
+/* .decora{
+	width: 0;
+	height: 0;
+	border-top:50rpx solid #5E77F7;
+	border-bottom:50rpx solid transparent;
+	border-left:50rpx solid #5E77F7;
+	border-right: 50rpx solid transparent;
+	border-top-left-radius: 10rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.decora .defa{
+	font-size: 26rpx;
+	color: #fff;
+	margin-top: -35rpx;
+	margin-left: -30rpx;
+} */
+
+
+
+/* add */
+.add{
+	width: 600rpx;
+	height: 80rpx;
+	margin: 130rpx auto 0 auto;
+	border-radius: 10rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #FB4B5C;
+}
+.add .plus{
+	font-size: 36rpx;
+	color: #fff;
+	margin-top: -5rpx;
+	margin-right: 35rpx;
+}
+.add .padd{
+	font-size: 30rpx;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

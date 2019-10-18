@@ -1,0 +1,126 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #F7F7F7;
+}
+
+
+/* userinfor */
+.user{
+	width: 750rpx;
+	height: 250rpx;
+	background: url(~@/static/image/usth.png) no-repeat ;
+	background-size: 100% 100%;
+	padding-top: 10rpx;
+	box-sizing: border-box;
+	position:relative
+}
+.userinfor{
+	width: 128rpx;
+	height:170rpx ;
+	margin: auto;
+	position: relative;
+}
+.userinfor .headport{
+	width: 128rpx;
+	height: 128rpx;
+	border-radius: 50%;
+}
+.userinfor .headport image{
+	width: 100%;
+	height: 100%;
+}
+.userinfor .usname{
+	display: block;
+	width: 690rpx;
+	font-size: 30rpx;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	left: -281rpx;
+	bottom: 0; 
+}
+
+/* ingetral */
+.user .ingetral{
+	width: 690rpx;
+	height:160rpx;
+	background: #fff;
+	box-shadow: 0 5rpx 7rpx 1rpx #CFCFCF;
+	position: absolute;
+	left: 0;
+	right:0;
+	top: 210rpx;
+	margin: auto;
+	border-radius: 10rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.user .ingetral view{
+	width: 50%;
+	height: 80rpx;
+	border-right: 2rpx solid #333333;
+}
+.user .ingetral view:last-child{
+	border-right: 0;
+}
+.user .ingetral view .num{
+	display: block;
+	width: 100%;
+	height: 22rpx;
+	color: #FB4B5C;
+	font-size: 22rpx;
+	text-align: center;
+	margin-bottom: 22rpx;
+}
+.user .ingetral view .ingnow{
+	display: block;
+	width: 100%;
+	height: 25rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color:#333333;
+}
+
+/* classicon */
+.content{
+	width: 690rpx;
+	height: auto;
+	padding:0 40rpx 0 40rpx;
+	box-sizing: border-box;
+	margin:151rpx auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background: #fff;
+	border-radius: 10rpx;
+	box-shadow: 0 0 10rpx 1rpx #CFCFCF;
+}
+.content .jump .classicon{
+	width: 203.3rpx;
+	height: 200rpx;
+	padding: 55rpx 0 0 0;
+	box-sizing: border-box;
+	background: #fff;
+}
+.content .jump .classicon .icon{
+	width: 60rpx;
+	height: 60rpx;
+	margin:0 auto 18rpx auto;
+}
+.content .jump .classicon .icon image{
+	width: 100%;
+	height: 100%;
+}
+.content .jump .classicon text{
+	display: block;
+	width: 100%;
+	color: #333333;
+	font-size: 26rpx;
+	text-align: center;
+}

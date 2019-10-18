@@ -1,0 +1,1 @@
+<view class="lazy-image data-v-534c9348" id="{{uuid}}"><image class="real-image data-v-534c9348" src="{{appear?realSrc:''}}" mode="aspectFill" data-event-opts="{{[['load',[['onLoaded',['$event']]]]]}}" bindload="__e"></image><view class="{{['data-v-534c9348',loaded?'loaded':'']}}"><image src="{{placeholdSrc}}" mode="aspectFill" class="data-v-534c9348"></image></view></view>

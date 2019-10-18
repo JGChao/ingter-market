@@ -1,0 +1,100 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #F7F7F7;
+}
+.scroll{
+	width: 100%;
+	height: auto;
+	background: #F7F7F7;
+	overflow: auto;
+	padding-bottom: 10rpx;
+}
+/* noticelist */
+.notilist{
+	width: 690rpx;
+	height: auto;
+	padding: 0 20rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-radius: 10rpx;
+	background: #fff;
+	-webkit-box-shadow: 0 0 10rpx 2rpx #E3E2E2;
+	        box-shadow: 0 0 10rpx 2rpx #E3E2E2;
+	margin:40rpx auto 0 auto ;
+}
+.notilist .nlist{
+	width: 650rpx;
+	height: 143rpx;
+	border-bottom: 1rpx solid #EEEEEE;
+}
+.notilist .nlist .conlist{
+	width: 100%;
+	height: 100%;
+	border-bottom: 1rpx solid #EEEEEE;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.notilist .nlist .conlist .icon{
+	width: 57rpx;
+	height: 48rpx;
+	padding-left: 8rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.notilist .nlist .conlist .icon image{
+	width: 40rpx;
+	height: 100%;
+}
+.notilist .nlist .conlist .notic{
+	width: 100rpx;
+	height: 48rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #FB4B5C;
+	text-align: left;
+	line-height: 48rpx;
+}
+.notilist .nlist .conlist .ndesc{
+	width: 493rpx;
+	height: 48rpx;
+	font-size: 28rpx;
+	color: #333;
+	text-align: left;
+	line-height: 48rpx;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.notilist .nlist:last-child{
+	border-bottom: 0;
+	margin-bottom: 10rpx;
+}
+/* popup */
+.popup {
+	font-size: 28rpx;
+	color: #333;
+}
+.popup /deep/  .uni-popup__wrapper-box{
+	border-radius: 10rpx;
+}
+.popup  .popz{
+	width: 100rpx;
+	height: 100rpx;
+	background: #000;
+}
+

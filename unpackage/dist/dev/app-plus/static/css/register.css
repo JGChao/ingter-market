@@ -1,0 +1,172 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: url(~@/static/image/login.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/* option */
+.option{
+	width: 381rpx;
+	height: 68rpx;
+	margin: 87rpx auto 120rpx auto;
+	display: flex;
+	justify-content: space-between;
+}
+.option .regis{
+	width: 120rpx;
+	height: 100%;
+	border-bottom:1rpx solid #5E5FF7;
+	box-sizing: border-box;
+	color: #5E5FF7;
+	font-size: 36rpx;
+	font-weight: bold;
+	text-align: center;
+}
+.option  .opt{
+	width: 120rpx;
+	height: 100%;
+}
+.option .opt .opttab{
+	width: 120rpx;
+	height: 100%;
+	color: #333;
+	font-size: 36rpx;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* form */
+.formBox{
+	width: 600rpx;
+	height: auto;
+	margin: auto;
+}
+/* phone */
+.formBox .phone{
+	width: 100%;
+	height:74rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	padding-left: 35rpx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 80rpx;
+}
+.formBox .phone .itel{
+	width: 36rpx;
+	height: 53rpx;
+}
+.formBox .phone .itel image{
+	width: 100%;
+	height: 100%;
+}
+.formBox .phone input{
+	width: 529rpx;
+	height: 53rpx;
+	text-indent: 1em;
+}
+.formBox .phone input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+/* lock */
+.formBox .password{
+	width: 100%;
+	height:64rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	padding-left: 35rpx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.formBox .password .lock{
+	width: 36rpx;
+	height: 43rpx;
+}
+.formBox .password .lock image{
+	width: 100%;
+	height: 100%;
+}
+.formBox .password input{
+	width: 529rpx;
+	height: 53rpx;
+	text-indent: 1em;
+}
+.formBox .password input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+/* tibs */
+.formBox .tibs{
+	width: 100%;
+	padding: 20rpx 40rpx 0 40rpx;
+	box-sizing: border-box;
+	font-size: 22rpx;
+	color: #FB4B5C;
+}
+/* vercode */
+.formBox .vercode{
+	width: 100%;
+	height: 80rpx;
+	margin-top: 39rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.formBox .vercode input{
+	width: 339rpx;
+	height: 79rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	text-indent: 2em;
+}
+.formBox .vercode input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+.formBox .vercode .getcode{
+	width: 220rpx;
+	height: 80rpx;
+	outline: none;
+	background:#5E5FF7;
+	font-size: 30rpx;
+	color: #fff;
+}
+/* btn */
+.formBox .subbtn{
+	width: 100%;
+	height: 80rpx;
+	background: #5E5FF7;
+	border-radius: 60rpx;
+	margin: 100rpx 0 39rpx 0;
+	font-size: 30rpx;
+	color: #fff;
+}
+/* forget */
+.formBox .forget{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 77rpx;
+}
+.formBox .forget .fgpass{
+	float: right;
+	margin-right: 30rpx;
+	font-size: 26rpx;
+	color: #666;
+}
+/* wxlogo */
+.wxlogo{
+	width: 78rpx;
+	height: 78rpx;
+	margin: auto;
+	border-radius: 50%;
+}
+.wxlogo image{
+	width: 100%;
+	height: 100%;
+}

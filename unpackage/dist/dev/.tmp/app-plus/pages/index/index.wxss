@@ -1,0 +1,174 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #F6F7F7;
+}
+.scroll{
+	width: 100%;
+	height: auto;
+	background: #F6F7F7;
+	overflow: auto;
+	padding-bottom: 98rpx;
+}
+
+/* bj */
+.backgroimg{
+	width: 750rpx;
+	height: 342rpx;
+}
+.backgroimg .swiper{
+	width: 100%;
+	height: 100%;
+}
+.backgroimg .swiper swiper-item{
+	width: 100%;
+	height: 100%;
+}
+.backgroimg .swiper swiper-item .backgroimg-img{
+	width: 100%;
+	height: 100%;
+}
+
+/* 公告 */
+.notice{
+	width: 750rpx;
+	height: 200rpx;
+	background: #FFFFFF;
+	margin-top: 29rpx;
+}
+.notice .not-left{
+	width:88rpx;
+	height: 50rpx;
+	border-radius:8rpx;
+	background: #FB4B5C;
+	text-align: center;
+	line-height: 50rpx;
+	font-size: 26rpx;
+	color: #fff;
+	float: left;
+	margin:29rpx 28rpx 0 40rpx;
+}
+.notice .not-middle{
+	width: 460rpx;
+	height: 200rpx;
+	float: left;
+	padding: 44rpx 0 27rpx 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.notice .not-middle text{
+	display: block;
+	width: 100%;
+	font-size: 26rpx;
+	color: #666;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 15rpx;
+	/* line-height: 1.7; */
+}
+.notice .look{
+	width: 52rpx;
+	height: 27rpx;
+	float: right;
+	margin: 42rpx 38rpx 0 35rpx;
+}
+.notice .look .not-right{
+	width: 100%;
+	height: 100%;
+	font-size: 26rpx;
+	color: #333;
+	float: right;
+}
+
+/* 分类 */
+.category{
+	width: 750rpx;
+	height: 220rpx;
+	margin-top: 29rpx;
+	background: #fff;
+	padding: 0 60rpx 0 60rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.category navigator{
+	width: 104rpx;
+	height: 133rpx;
+}
+.category navigator .butt{
+	width: 88rpx;
+	height: 88rpx;
+	margin: auto;
+}
+.category navigator .butt image{
+	width: 100%;
+	height: 100%;
+}
+.category navigator text{
+	display: block;
+	width: 100%;
+	font-size: 26rpx;
+	color: #333;
+	margin-top: 12rpx;
+}
+
+/* 积分商城 */
+.title{
+	width: 750rpx;
+	height: 95rpx;
+	background: #fff;
+	margin-top: 29rpx;
+}
+.title text{
+	display: block;
+	height: 100%;
+	font-size: 33rpx;
+	color: #333;
+	font-weight: 550;
+	line-height: 95rpx;
+	margin-left: 40rpx;
+}
+.intmall{
+	width: 750rpx;
+	padding: 0 40rpx 0 40rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	background: #fff;
+}
+.intmall .ingimg {
+	width: 300rpx;
+	height: 300rpx;
+	margin-bottom: 40rpx;
+}
+.intmall .ingimg image{
+	width: 100%;
+	height: 100%;
+}
+

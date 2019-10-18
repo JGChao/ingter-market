@@ -1,0 +1,79 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #F7F7F7;
+}
+.scroll{
+	width: 100%;
+	height: auto;
+	background: #F7F7F7;
+	overflow: auto;
+	padding-bottom: 10rpx;
+}
+text{
+	display: block;
+}
+/* 公告标题 */
+.nottitle{
+	width: 750rpx;
+	padding:38rpx 23rpx 29rpx 40rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+.nottitle :before{
+	content: '';
+	width: 650rpx;
+	height: 2rpx;
+	background:#EEEEEE ;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.nottitle .no_title{
+	font-size: 26rpx;
+	color: #333333;
+	width: 100%;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 25rpx;
+}
+.nottitle .no_time{
+	font-size: 20rpx;
+	color: #959595;
+	width: 100%;
+}
+/* 公告内容 */
+.notcontent{
+	width: 750rpx;
+	padding: 50rpx 23rpx 0 25rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.notcontent .getmo{
+	font-size: 26rpx;
+	color: #333;
+	width: 100%;
+	margin-bottom: 26rpx;
+}
+.notcontent .article{
+	font-size: 22rpx;
+	color: #959595;
+	width: 100%;
+	margin-bottom: 20rpx;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.notcontent .article:last-child{
+	margin-bottom: 0;
+}
+

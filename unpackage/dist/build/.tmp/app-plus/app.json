@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/exlist/exlist",
+    "pages/my/my",
+    "pages/shopredeem/shopredeem",
+    "pages/payment/payment",
+    "pages/exrecord/exrecord",
+    "pages/integralog/ingetralog",
+    "pages/mycollection/mycollection",
+    "pages/myorder/myorder",
+    "pages/brandarea/brandarea",
+    "pages/noticelist/noticelist",
+    "pages/noticedetails/noticedetails",
+    "pages/details/details",
+    "pages/orderdetails/orderdetails",
+    "pages/myaddress/myaddress",
+    "pages/editaddress/editaddress",
+    "pages/newaddress/newaddress",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forgetpass/forgetpass",
+    "pages/changepass/changepass"
+  ],
+  "window": {
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#6462F4",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FFD053",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "height": "98px",
+    "fontSize": "20px",
+    "iconWidth": "50px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/image/home.png",
+        "selectedIconPath": "/static/image/home-1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/static/image/category.png",
+        "selectedIconPath": "/static/image/category-1.png"
+      },
+      {
+        "pagePath": "pages/exlist/exlist",
+        "text": "兑换列表",
+        "iconPath": "/static/image/exlist.png",
+        "selectedIconPath": "/static/image/exlist-1.png"
+      },
+      {
+        "pagePath": "pages/shopredeem/shopredeem",
+        "text": "购物车",
+        "iconPath": "/static/image/shopcart.png",
+        "selectedIconPath": "/static/image/shopcart-1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/image/my.png",
+        "selectedIconPath": "/static/image/my-1.png"
+      }
+    ]
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "雀咖积分商城",
+  "compilerVersion": "2.3.3",
+  "usingComponents": {}
+}

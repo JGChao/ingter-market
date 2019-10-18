@@ -1,0 +1,80 @@
+.bigBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: url(~@/static/image/login.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/* form */
+.formBox{
+	width: 600rpx;
+	height: auto;
+	margin:130rpx auto 0 auto;
+}
+/* phone */
+.formBox .phone{
+	width: 100%;
+	height:74rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	padding-left: 35rpx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 70rpx;
+}
+.formBox .phone .itel{
+	width: 36rpx;
+	height: 53rpx;
+}
+.formBox .phone .itel image{
+	width: 100%;
+	height: 100%;
+}
+.formBox .phone input{
+	width: 529rpx;
+	height: 53rpx;
+	text-indent: 1em;
+}
+.formBox .phone input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+/* vercode */
+.formBox .vercode{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.formBox .vercode input{
+	width: 339rpx;
+	height: 79rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	text-indent: 2em;
+}
+.formBox .vercode input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+.formBox .vercode .getcode{
+	width: 220rpx;
+	height: 80rpx;
+	outline: none;
+	background:#5E5FF7;
+	font-size: 30rpx;
+	color: #fff;
+}
+/* btn */
+.formBox .subbtn{
+	width: 100%;
+	height: 80rpx;
+	background: #5E5FF7;
+	border-radius: 60rpx;
+	margin: 140rpx 0 0 0;
+	font-size: 30rpx;
+	color: #fff;
+}
