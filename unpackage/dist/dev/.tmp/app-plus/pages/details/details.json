@@ -2,5 +2,7 @@
   "navigationBarTitleText": "商品详情",
   "navigationBarBackgroundColor": "#F7F7F7",
   "navigationBarTextStyle": "black",
-  "usingComponents": {}
+  "usingComponents": {
+    "popup": "/components/YYT-popup/YYT-popup"
+  }
 }

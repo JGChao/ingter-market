@@ -109,9 +109,18 @@
 	height: 80rpx;
 	background: #5E5FF7;
 	border-radius: 60rpx;
-	margin: 140rpx 0 39rpx 0;
+	margin: 90rpx 0 30rpx 0;
 	font-size: 30rpx;
 	color: #fff;
+}
+.formBox .findex{
+	width: 100%;
+	height: 80rpx;
+	background: #5E5FF7;
+	border-radius: 60rpx;
+	font-size: 30rpx;
+	color: #fff;
+	margin-bottom: 20rpx;
 }
 /* forget */
 .formBox .forget{

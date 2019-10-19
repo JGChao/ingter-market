@@ -19,14 +19,15 @@
 					<text class="ingnow">我的积分</text>
 				</view>
 			</view>
+			<view class="tlogin" @click="tuichu">退出</view>
 		</view>
 		<!-- userinfor -->
 		<view class="user" v-else>
-			<view class="userinfor">
+			<view class="userinfor"  @click="userLogin">
 				<view class="headport">
 					<image src="/static/image/headport.png"></image>
 				</view>
-				<text class="usname" @click="userLogin">点击登录</text>
+				<text class="usname">点击登录</text>
 			</view>
 			<!-- integral -->
 			<view class="ingetral">
@@ -135,13 +136,19 @@
 			// 获取用户信息
 			getUserinfo(){
 				
+			},
+			// 退出登录
+			tuichu(){
+				uni.removeStorageSync('token');
+				uni.removeStorageSync('userinfo');
+				uni.reLaunch({
+					url:'/pages/index/index'
+				})
 			}
 		},
 		onLoad(){
 			this.token = uni.getStorageSync('token');
 			this.userinfo = uni.getStorageSync('userinfo');
-			console.log(this.token)
-			console.log(this.userinfo)
 		}
 	}
 </script>

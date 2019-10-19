@@ -7,47 +7,20 @@
 				<view class="magni">
 					<image src="/static/image/magni.png" ></image>
 				</view>
-				<input  type="text" value="" />
-				<button class="sbtn">搜索</button>
+				<input  type="text" v-model="search" value="" />
+				<view class="sbtn" @click="searchgoods">搜索</view>
 			</view>
 			<!-- conlist -->
 			<view class="conlist" v-if="exlistGoods">
-				<view class="conbox" v-for="(item , index) in exlistGoods">
+				<view class="conbox" v-for="(item , index) in exlistGoods" :key="index">
 					<navigator :url="'/pages/details/details?goods_id=' + item.goods_id" hover-class="none">
 						<view>
 							<image :src="item.image[0].file_path" ></image>
 						</view>
 					</navigator>
 					<text>{{item.goods_name}}</text>
-					<navigator class="btn" :url="'/pages/payment/payment?goods_id=' + item.goods_id" hover-class="none">立即兑换</navigator>
+					<navigator class="btn" :url="'/pages/details/details?goods_id=' + item.goods_id" hover-class="none">立即兑换</navigator>
 				</view>
-				<!-- <view class="conbox">
-					<navigator url="" hover-class="none">
-						<view>
-							<image src="/static/image/thu1.png" ></image>
-						</view>
-					</navigator>
-					<text>MORE原装魔音音乐耳机</text>
-					<view class="btn">立即兑换</view>
-				</view>
-				<view class="conbox">
-					<navigator url="" hover-class="none">
-						<view>
-							<image src="/static/image/thu1.png" ></image>
-						</view>
-					</navigator>
-					<text>MORE原装魔音音乐耳机</text>
-					<view class="btn">立即兑换</view>
-				</view>
-				<view class="conbox">
-					<navigator url="" hover-class="none">
-						<view>
-							<image src="/static/image/thu1.png" ></image>
-						</view>
-					</navigator>
-					<text>MORE原装魔音音乐耳机</text>
-					<view class="btn">立即兑换</view>
-				</view> -->
 			</view>
 		</view>
 	</view>
@@ -57,38 +30,63 @@
 	export default{
 		data(){
 			return {
-				exlistGoods:[],
+				exlistGoods:null,
 				host:"",
 				imghost:"",
-				exlistobj:{
-					search:'',
-					category_id:0,
-					sortType:'',
-					sortPrice:'',
-				}
+				category_id:'',
+				search:'',
 			}
 		},
 		methods:{
-			// 获取商品
-			getAllgoods(){
+			// 请求
+			query(a,b,c,d){
 				uni.request({
 				    url: this.host + 'api/goods/lists',
-				    data: this.exlistobj,
+				    data: {
+						search:a,
+						sortType:b,
+						sortPrice:c,
+						category_id:d,
+					},
 				    header: {},
 					method:'GET',
 					dataType:'json',
 				    success: (res) => {
 						let result = res.data.data.list.data;
-						this.exlistGoods = result;
+						if(result.length){
+							this.exlistGoods = result;
+						}else{
+							uni.showToast({
+								title:'该分类暂无商品',
+								icon:"none"
+							})
+						}
 				    },
-				});
-			}
+				});;
+			},
+			// 第一次请求请求
+			Onegetgoods(){
+				this.query('','','','')
+			},
+			// 获取商品
+			getAllgoods(){
+				this.query('','','',this.category_id)
+			},
+			// 搜索商品
+			searchgoods(){
+				this.query(this.search,'','','')
+			},
+		},
+		onShow() {
+			this.getAllgoods('','','',this.category_id);
+		},
+		onTabItemTap(){
+			this.Onegetgoods('','','','');
 		},
 		onLoad(option){
 			this.host = this.$store.state.host;
 			this.imghost = this.$store.state.imghost;
-			// this.exlistobj.category_id = this.$store.state.category_id.category_id
-			this.getAllgoods();
+			this.category_id = this.$store.state.category_id.category_id;	
 		}
 	}
 </script>

@@ -22,6 +22,7 @@
 				<input type="password" v-model="form.password" value=""  placeholder="请输入密码"/>
 			</view>
 			<button class="subbtn" @click="subLogin">登录</button>
+			<button class="findex" @click="findex">返回首页</button>
 			<!-- forget -->
 			<view class="forget">
 				<navigator url="/pages/forgetpass/forgetpass" hover-class="none" class="fgpass">忘记密码？</navigator>
@@ -35,6 +36,7 @@
 </template>
 
 <script>
+	import until from '@/util.js'
 	export default{
 		data(){
 			return {
@@ -48,12 +50,11 @@
 		methods:{
 			// 登录
 			subLogin(){
-				// if (!this.$validate.isPhone(this.form.username)) {
-				//   uni.showToast({
-				// 	icon: 'none',
-				// 	title: '请输入正确的手机号'
-				//   })
-				// }
+				// 验证手机号
+				if(!until.checkMobile(this.form.username)){
+					uni.showToast({title: '手机号格式错误',icon: 'none'});
+					return;
+				}
 				uni.request({
 					url:this.host + 'api/user/login',
 					data:this.form,
@@ -67,12 +68,17 @@
 								title:'登录成功',
 								icon:'success'
 							})
-						};
-						setTimeout(()=>{
-							uni.reLaunch({
-								url:'/pages/my/my'
+							setTimeout(()=>{
+								uni.reLaunch({
+									url:'/pages/my/my'
+								})
+							},2000);
+						}else if(res.data.code == 0){
+							uni.showToast({
+								title:'账号或密码错误',
+								icon:"none"
 							})
-						},2000);
+						}
 						// 存token
 						uni.setStorageSync('token', result.token);
 						// 存用户信息
@@ -81,6 +87,12 @@
 					}
 				})
 			},
+			// 返回首页
+			findex(){
+				uni.reLaunch({
+					url:'/pages/index/index'
+				})
+			}
 			
 		},
 		onLoad(){

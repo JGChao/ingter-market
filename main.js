@@ -9,8 +9,7 @@ Vue.prototype.$store = store
 
 
 // 表单验证
-import validate from '@/components/ys-validate.js'
-Vue.prototype.$validate = validate
+
 
 
 Vue.config.productionTip = false

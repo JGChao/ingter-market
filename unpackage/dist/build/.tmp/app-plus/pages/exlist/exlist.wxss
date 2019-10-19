@@ -57,26 +57,29 @@
 	height: 68rpx;
 	outline: none;
 	text-indent: 1em;
+	font-size: 26rpx;
+	color: #333;
 }
 .search .sbtn{
 	width: 158rpx;
 	height: 100%;
 	background: #FB4B5C;
+	text-align: center;
 	font-size: 30rpx;
 	color:#fff;
 	border:0;
 	line-height:68rpx;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	border-top-right-radius: 10rpx;
-	border-bottom-right-radius: 10rpx;
+	border-top-right-radius: 7rpx;
+	border-bottom-right-radius: 7rpx;
 }
 
 /* conlist */
 .conlist{
-	width: 690rpx;
+	width: auto;
 	padding: 0 18rpx;
-	margin: auto;
+	margin: 0 30rpx;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	display: -webkit-box;
@@ -94,9 +97,10 @@
 	border-radius: 10rpx;
 	-webkit-box-shadow: 0 0 10rpx 2rpx #E3E2E2;
 	        box-shadow: 0 0 10rpx 2rpx #E3E2E2;
+	float: left;
 }
 .conlist .conbox{
-	width: 305rpx;
+	width: 327rpx;
 	height: auto;
 	background: #fff;
 	padding: 50rpx 0;

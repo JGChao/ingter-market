@@ -33,7 +33,7 @@
 						<text class="shname">{{orderdetails.detail.goods_name}}</text>
 						<view class="innum">
 							<text class="left">{{orderdetails.detail.spec[0].goods_price}}积分</text>
-							<text class="right">×1</text>
+							<text class="right">×{{goods_num}}</text>
 						</view>
 					</view>
 				</view>
@@ -50,7 +50,7 @@
 				</view>
 				<!-- heji -->
 				<view class="htotal">
-					<text class="left">共1件 合计：</text>
+					<text class="left">共{{goods_num}}件 合计：</text>
 					<text class="right">{{orderdetails.detail.spec[0].goods_price}}积分</text>
 				</view>
 			</view>
@@ -58,7 +58,7 @@
 		<!-- jiesuan -->
 		<view class="bottom">
 			<view class="hinfo">
-				<text class="left">共1件，</text>
+				<text class="left">共{{goods_num}}件，</text>
 				<text class="in">合计：</text>
 				<text class="right">{{orderdetails.detail.spec[0].goods_price}}积分</text>
 			</view>
@@ -83,6 +83,7 @@
 			return {
 				goods_id:'',
 				goods_price:'',
+				goods_num:'',
 				orderdetails:null,
 			}
 		},
@@ -123,6 +124,7 @@
 		onLoad(option){
 			this.goods_id = option.goods_id;
 			this.goods_price = option.goods_price;
+			this.goods_num = option.goods_num;
 			this.host = this.$store.state.host;
 			this.imghost = this.$store.state.imghost;
 			this.getOrderGoods();

@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {
-    "loading1": "/components/pocky-lazyLoad/components/lazyLoad/anime/loading-1"
-  }
+  "usingComponents": {}
 }

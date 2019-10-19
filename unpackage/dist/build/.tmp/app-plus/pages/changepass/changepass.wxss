@@ -17,6 +17,47 @@
 }
 
 
+/* phone */
+.formBox .phone{
+	width: 100%;
+	height:74rpx;
+	border-bottom: 1rpx solid #B5B5B5;
+	padding-left: 35rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	margin-bottom: 70rpx;
+}
+.formBox .phone .itel{
+	width: 36rpx;
+	height: 53rpx;
+}
+.formBox .phone .itel image{
+	width: 100%;
+	height: 100%;
+}
+.formBox .phone input{
+	width: 529rpx;
+	height: 53rpx;
+	text-indent: 1em;
+}
+.formBox .phone input::-webkit-input-placeholder{
+    color:#666;
+	font-size: 30rpx;
+}
+
+
 /* lock */
 .formBox .password{
 	width: 100%;
@@ -37,8 +78,6 @@
 	-webkit-align-items: flex-start;
 	    -ms-flex-align: start;
 	        align-items: flex-start;
-}
-.formBox .password:first-child{
 	margin-bottom: 70rpx;
 }
 .formBox .password .lock{

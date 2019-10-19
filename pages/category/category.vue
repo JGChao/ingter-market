@@ -19,8 +19,8 @@
 			</view>
 			<view v-if="categoryleave">
 				<!-- content -->
-				<view class="content" v-for="(item , index) in categoryleave" :key="index">
-					<view class="thumb" @click="exlist" :data-category_id='item.category_id'>
+				<view class="content" v-for="(item , index) in categoryleave" :key="index" @click="exlist" :data-category_id='item.category_id'>
+					<view class="thumb" >
 						<image :src="imghost + item.image.file_name"></image>
 					</view>
 					<view class="catename">{{item.name}}</view>

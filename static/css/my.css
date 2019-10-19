@@ -18,6 +18,14 @@
 	box-sizing: border-box;
 	position:relative
 }
+/* 退出登录 */
+.tlogin{
+	font-size: 24rpx;
+	color: #fff;
+	position: absolute;
+	top: 15rpx;
+	right: 15rpx;
+}
 .userinfor{
 	width: 128rpx;
 	height:170rpx ;
@@ -124,3 +132,6 @@
 	font-size: 26rpx;
 	text-align: center;
 }
+
+
+
