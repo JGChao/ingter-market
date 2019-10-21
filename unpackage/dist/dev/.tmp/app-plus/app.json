@@ -33,9 +33,6 @@
     "selectedColor": "#FFD053",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
-    "height": "98px",
-    "fontSize": "20px",
-    "iconWidth": "50px",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -76,6 +73,6 @@
     "autoclose": false
   },
   "appname": "雀咖积分商城",
-  "compilerVersion": "2.3.3",
+  "compilerVersion": "2.3.6",
   "usingComponents": {}
 }

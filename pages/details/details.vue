@@ -81,7 +81,6 @@
 					<view class="lnny" v-if="details.specData">
 						<!-- 价格--每一个颜色的库存 -->
 						<view class="price-stock">
-							<!-- <view class="price" v-if="goods_price">价格：0积分</view> -->
 							<view class="price">价格：{{goods_price1}}积分</view>
 							<view class="stock">库存：100件</view>
 						</view>
@@ -112,11 +111,11 @@
 					<view class="num">
 						<view class="ntitle">购买数量</view>
 						<view class="addred">
-							<view class="red" @click="red">
+							<view class="red" @click="red1">
 								<image src="/static/image/sub.png"></image>
 							</view>
-							<view class="snum">{{goods_num}}</view>
-							<view class="add" @click="add">
+							<view class="snum">{{goods_num1}}</view>
+							<view class="add" @click="add1">
 								<image src="/static/image/add.png"></image>
 							</view>
 						</view>
@@ -164,11 +163,11 @@
 					<view class="num">
 						<view class="ntitle">购买数量</view>
 						<view class="addred">
-							<view class="red" @click="red">
+							<view class="red" @click="red2">
 								<image src="/static/image/sub.png"></image>
 							</view>
-							<view class="snum" :class="[goods_num == 1 ? 'disabled' : '']">{{goods_num}}</view>
-							<view class="add" @click="add">
+							<view class="snum">{{goods_num2}}</view>
+							<view class="add" @click="add2">
 								<image src="/static/image/add.png"></image>
 							</view>
 						</view>
@@ -215,7 +214,8 @@
 				priceType1:'',
 				priceType2:'',
 				// 购买数量
-				goods_num:1,
+				goods_num1:1,
+				goods_num2:1,
 				// 商品价格
 				goods_price1:0,
 				goods_price2:0,
@@ -245,23 +245,18 @@
 					}
 				})
 			},
-			// 加入购物车打开弹窗
-			addshopcart(position){
-				this.position = position;
-				this.openPopup2 = true;
-			},
 			// 立即兑换打开弹窗
 			open(position){
 				this.position = position;
 				this.openPopup = true;
+				if(!this.details.specData){
+					this.goods_price1 = this.details.detail.spec[0].goods_price;
+					this.goods_sku_id1 = this.details.detail.spec[0].spec_sku_id;;
+				}
 			},
 			// 立即兑换取消关闭弹出层
 			close(){
 				this.openPopup = false;
-			},
-			// 加入购物车关闭弹出层
-			close2(){
-				this.openPopup2 = false;
 			},
 			// 立即兑换用户点击商品规格1
 			select1(state){
@@ -269,6 +264,17 @@
 					return
 				}
 				this.currentType1 = state;
+				this.priceType1 = this.currentType1 + '_' + this.currentType2;
+				let goodsprice = this.details.specData.spec_list;
+				goodsprice.forEach((v, i)=>{
+					if(v.spec_sku_id == this.priceType1){
+						if(goodsprice[i].spec_sku_id){
+							this.goods_sku_id1 = goodsprice[i].spec_sku_id;
+							this.goods_price1 = goodsprice[i].form.goods_price;	
+						}
+					}
+					
+				})
 			},
 			// 立即兑换用户点击商品规格2
 			select2(state){
@@ -282,37 +288,38 @@
 					if(v.spec_sku_id == this.priceType1){
 						if(goodsprice[i].spec_sku_id){
 							this.goods_sku_id1 = goodsprice[i].spec_sku_id;
-							this.goods_price1 = goodsprice[i].form.goods_price;
+							this.goods_price1 = goodsprice[i].form.goods_price;	
 						}
 					}
 					
 				})
+				
 			},
-			// 商品减
-			red(){
-				if(this.goods_num <= 1){
+			// 立即兑换商品减
+			red1(){
+				if(this.goods_num1 <= 1){
 					return
 				}
-				this.goods_num--;
+				this.goods_num1--;
 			},
-			// 商品加
-			add(){
-				this.goods_num++;
+			// 立即兑换商品加
+			add1(){
+				this.goods_num1++;
 			},
-			// 立即兑换
-			goplay(){
-				if(this.goods_price1 == 0){
-					uni.showToast({
-						title:'请选择商品属性',
-						icon:"none",
-						position:'bottom'
-					})
-					return;
+			
+			
+			// 加入购物车打开弹窗
+			addshopcart(position){
+				this.position = position;
+				this.openPopup2 = true;
+				if(!this.details.specData){
+					this.goods_price2 = this.details.detail.spec[0].goods_price;
+					this.goods_sku_id2 = this.details.detail.spec[0].spec_sku_id;
 				}
-				this.openPopup = false;
-				uni.navigateTo({
-					url:'/pages/payment/payment?goods_id=' + this.goods_id + '&goods_num=' + this.goods_num
-				})
+			},
+			// 加入购物车关闭弹出层
+			close2(){
+				this.openPopup2 = false;
 			},
 			// 加入购物车用户点击商品规格1
 			select3(state){
@@ -320,6 +327,16 @@
 					return
 				}
 				this.currentType3 = state;
+				this.priceType2 = this.currentType3 + '_' + this.currentType4
+				let goodsprice = this.details.specData.spec_list;
+				goodsprice.forEach((v, i)=>{
+					if(v.spec_sku_id == this.priceType2){
+						if(goodsprice[i].spec_sku_id){
+							this.goods_sku_id2 = goodsprice[i].spec_sku_id;
+							this.goods_price2 = goodsprice[i].form.goods_price;
+						}
+					}
+				})
 			},
 			// 加入购物车用户点击商品规格2
 			select4(state){
@@ -338,7 +355,18 @@
 					}
 				})
 			},
-			// 添加购物车
+			// 购物车 商品减
+			red2(){
+				if(this.goods_num2 <= 1){
+					return
+				}
+				this.goods_num2--;
+			},
+			// 购物车 商品加
+			add2(){
+				this.goods_num2++;
+			},
+			// 添加购物车 确定
 			addcart(){
 				if(this.goods_price2 == 0){
 					uni.showToast({
@@ -349,10 +377,48 @@
 					return;
 				}
 				this.openPopup2 = false;
-				uni.showToast({
-					title:'购物车添加成功'
+				uni.request({
+					url:this.host + 'api/cart/add',
+					data:{
+						goods_id:this.goods_id,
+						goods_num:this.goods_num2,
+						goods_sku_id:this.goods_sku_id2,
+						token:this.token,
+					},
+					method:"POST",
+					success:(res)=>{
+						if(res.data.code == 1){
+							uni.showToast({
+								title:'购物车添加成功',
+								icon:"none"
+							})
+						}else if(res.data.code == 0){
+							uni.showToast({
+								title:'很抱歉，商品库存不足',
+								icon:"none"
+							})
+						}
+					}
 				})
-			}
+			},
+			// 立即兑换 确定
+			goplay(){
+				if(this.details.specData){
+					if(this.goods_price1 == 0){
+						uni.showToast({
+							title:'请选择商品属性',
+							icon:"none",
+							position:'bottom'
+						})
+						return;
+					}
+				}
+				this.openPopup = false;
+				
+				uni.navigateTo({
+					url:'/pages/payment/payment?goods_id=' + this.goods_id + '&goods_num=' + this.goods_num1
+				})
+			},
 		},
 		onLoad(option){
 			this.token = uni.getStorageSync('token');

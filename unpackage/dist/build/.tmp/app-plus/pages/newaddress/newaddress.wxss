@@ -133,7 +133,7 @@ text{
 	width: 450rpx;
 	height: 100%;
 }
-.btn{
+.bigBox .btn{
 	width: 600rpx;
 	height: 80rpx;
 	margin: 80rpx auto 0 auto;
@@ -143,5 +143,24 @@ text{
 	line-height: 80rpx;
 	font-size: 28rpx;
 	color: #fff;
+}
+.bigBox .btnn{
+	width: 600rpx;
+	height: 80rpx;
+	margin: 80rpx auto 0 auto;
+	border-radius: 10rpx;
+	background: #808080;
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	color: #fff;
+}
+.uinfor .address{
+	font-size: 26rpx;
+	color: #666;
+}
+.uinfor input{
+	font-size: 26rpx;
+	color: #333;
 }
 

@@ -88,6 +88,7 @@ text{
 	        align-items: flex-start;
 }
 .reslist .restlistscroll .detcons .uinfor{
+	width: 426rpx;
 	font-size: 26rpx;
 	color: #333;
 	margin-left: 40rpx;
@@ -96,9 +97,25 @@ text{
 	   text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.reslist .restlistscroll .detcons .uinfor:first-child{
+.reslist .restlistscroll .detcons .uinfor .name{
 	font-size: 30rpx;
 	font-weight: bold;
+	float: left;
+	height: 40rpx;
+}
+.reslist .restlistscroll .detcons .uinfor .defuil{
+	float: left;
+	margin-left: 25rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	color: transparent;
+}
+.reslist .restlistscroll .detcons .uinfor .defuilys{
+	float: left;
+	margin-left: 25rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	color:#5E5FF7 ;
 }
 
 /* you */
@@ -125,27 +142,6 @@ text{
 	height: 30rpx;
 	margin: auto;
 }
-
-/* zhuangshi */
-
-/* .decora{
-	width: 0;
-	height: 0;
-	border-top:50rpx solid #5E77F7;
-	border-bottom:50rpx solid transparent;
-	border-left:50rpx solid #5E77F7;
-	border-right: 50rpx solid transparent;
-	border-top-left-radius: 10rpx;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.decora .defa{
-	font-size: 26rpx;
-	color: #fff;
-	margin-top: -35rpx;
-	margin-left: -30rpx;
-} */
 
 /* add */
 .add{

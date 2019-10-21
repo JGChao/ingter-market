@@ -3,28 +3,24 @@
 		<!-- uinfor -->
 		<view class="uinfor">
 			<view class="shaddress">
-				<text class="iaddres">收货地址：</text>
-				<input type="text" value="" placeholder="请填写地址" placeholder-style="font-size:30rpx;" />
+				<text class="iaddres">所在地区：</text>
+				<input type="text" v-model="form.region" value="" placeholder="福建省,厦门市,思明区" placeholder-class="address" />
+			</view>
+			<view class="shaddress" @click="xxress">
+				<text class="iaddres">详细地址：</text>
+				<input type="text" v-model="form.detail" value="" placeholder="请填写地址" placeholder-class="address" />
 			</view>
 			<view class="uname">
 				<text class="iname">联系人：</text>
-				<input type="text" value="" placeholder="请填写姓名" placeholder-style="font-size:30rpx;" />
-			</view>
-			<view class="sex">
-				<radio-group @change="radioChange">
-					<label class="radio" style="font-size: 28rpx; margin-right: 20rpx;"  v-for="(item, index) in sex" :key="item.value">
-						<radio value="" style="transform:scale(0.7);" />
-						{{item.name}}
-					</label>
-				</radio-group>
+				<input type="text" v-model="form.name" value="" placeholder="请填写姓名" placeholder-class="address" />
 			</view>
 			<view class="uphone">
 				<text class="ipnone">联系方式：</text>
-				<input type="text" value="" placeholder="请填写手机号码" placeholder-style="font-size:30rpx;"   />
+				<input type="text" v-model="form.phone" value="" placeholder="请填写手机号码" placeholder-class="address" />
 			</view>
 		</view>
 		<!-- annui -->
-		<view class="btn">保存</view>
+		<view class="btn" @click="subbtn">保存</view>
 	</view>
 </template>
 
@@ -32,34 +28,63 @@
 	export default{
 		data(){
 			return{
-				sex:[
-					{
-						value: '男',
-						name: '先生'
-					},
-					{
-						value: '女',
-						name: '女士'
-					}
-				],
-				current:0
+				form:{
+					region:'',
+					detail:'',
+					name:'',
+					phone:'',
+					token:''
+				},
+				host:'',
 			}
 		},
 		methods:{
-			// 单选按钮
-			radioChange(evt) {
-				for (let i = 0; i < this.sex.length; i++) {
-					if (this.sex[i].value === evt.target.value) {
-						this.current = i;
-						break;
+			// 定位地址
+			xxress(){
+				uni.chooseLocation({
+				    success:(res)=>{
+					   this.form.detail = res.address
+				    }
+				});
+			},
+			// 保存收货地址
+			subbtn(){
+				uni.request({
+					url:this.host + '/api/address/add',
+					data:this.form,
+					method:"POST",
+					success:(res)=>{
+						if(res.data.code == 1){
+							uni.showToast({
+								title:"地址添加成功",
+								icon:'none',
+							})
+							setTimeout(()=>{
+								uni.navigateTo({
+									url:'/pages/myaddress/myaddress'
+								})
+							},1000)
+						}
 					}
-				}
+				})
 			}
+		},
+		onLoad(){
+			this.host = this.$store.state.host;
+			this.form.token = uni.getStorageSync('token');	
 		}
 	}
 </script>
 
 <style>
 	@import url("../../static/css/editaddress.css");
+	.uinfor .address{
+		font-size: 26rpx;
+		color: #666;
+	}
+	.uinfor input{
+		font-size: 26rpx;
+		color: #333;
+	}
 </style>
 

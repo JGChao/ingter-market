@@ -11,7 +11,6 @@
 	height: auto;
 	background: #F7F7F7;
 	overflow: auto;
-	margin-bottom: 10rpx;
 }
 
 
@@ -43,12 +42,12 @@
 }
 .bralist .brablock{
 	width: 320rpx;
-	height: 316rpx;
+	height: auto;
 	position: relative;
 }
 .bralist .brablock .bthumb{
-	width: 100%;
-	height: 240rpx;
+	width: 300rpx;
+	height: 300rpx;
 	margin-bottom: 20rpx;
 }
 .bralist .brablock .bthumb image{
@@ -64,6 +63,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	margin-bottom: 20rpx;
 }
 .bralist .brablock .bbtn{
 	width: 180rpx;
@@ -80,6 +80,6 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 170rpx;
+	top: 190rpx;
 	margin: auto;
 }

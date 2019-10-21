@@ -21,32 +21,42 @@
 	height: 240rpx;
 	background: #fff;
 	border-radius: 10rpx;
+	padding-top:38rpx;
+	box-sizing: border-box;
 	margin:30rpx auto 0 auto;
 	box-shadow: 0 0 7rpx 2rpx #EFEEEE;
-	position: relative;
+	overflow: hidden;
+	overflow: auto;
+}
+.conList::-webkit-scrollbar{
+	display: none;
+}
+.conList .scoll{
+	width: 750rpx;
+	height: 164rpx;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.conList .conleft{
+.conList .scoll .conleft{
 	width: 164rpx;
 	height: 164rpx;
 	margin: 0 30rpx 0 0;
 }
-.conList .conleft image{
+.conList .scoll .conleft image{
 	width: 100%;
 	height: 100%;
 }
-.conList .conright{
+.conList .scoll .conright{
 	width: 427rpx;
 	height: 164rpx;
 }
-.conList .conright .upper{
+.conList .scoll .conright .upper{
 	width: 100%;
 	height: 80rpx;
 	margin-bottom: 44rpx;
 }
-.conList .conright .upper .title{
+.conList .scoll .conright .upper .title{
 	display: block;
 	width: 100%;
 	font-size: 30rpx;
@@ -55,24 +65,24 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.conList .conright .upper .integr{
+.conList .scoll .conright .upper .integr{
 	width: 100%;
 	font-size: 30rpx;
 	color: #FB4B5C;
 	font-weight: bold;
 }
-.conList .conright .upper .integr .orgprice{
+.conList .scoll .conright .upper .integr .orgprice{
 	font-size: 24rpx;
 	color: #333;
 	font-weight: 100;
 	margin-left: 20rpx;
 	text-decoration: line-through;
 }
-.conList .conright .lower{
+.conList .scoll .conright .lower{
 	width: 100%;
 	height: 40rpx;
 }
-.conList .conright .lower .addsub{
+.conList .scoll .conright .lower .addsub{
 	width: 162rpx;
 	height: 40rpx;
 	float: right;
@@ -81,17 +91,17 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.conList .conright .lower .addsub .sub{
+.conList .scoll .conright .lower .addsub .sub{
 	width: 20rpx;
 	height: 31rpx;
 }
-.conList .conright .lower .addsub .sub image{
+.conList .scoll .conright .lower .addsub .sub image{
 	display: block;
 	margin-top: -0.5rpx;
 	width: 100%;
 	height: 100%;
 }
-.conList .conright .lower .addsub .num{
+.conList .scoll .conright .lower .addsub .num{
 	width: 100rpx;
 	height: 40rpx;
 	border: 1rpx solid #666666;
@@ -101,19 +111,17 @@
 	font-weight: bold;
 }
 
-/* 右上角装饰 */
-/* .conList .decor{
-	 width:0;
-	height:0;
-	border-top:50rpx solid #FFD053;
-	border-bottom:50rpx solid transparent;
-	border-left:50rpx solid transparent;
-	border-right: 50rpx solid #FFD053;
-	border-top-right-radius: 10rpx;
-	position: absolute;
-	top: 0;
-	right: 0;
-} */
+.conList .scoll .remove{
+	width: 60rpx;
+	height: 30rpx;
+}
+.conList .scoll .remove image{
+	display: block;
+	width: 27rpx;
+	height: 30rpx;
+	margin: auto;
+}
+
 .scroll .conList:last-child{
 	margin-bottom: 5rpx;
 }

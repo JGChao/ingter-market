@@ -143,9 +143,6 @@
 			"selectedColor": "#FFD053",
 			"backgroundColor": "#ffffff",
 			"borderStyle":"white",
-			"height":"98px",
-			"fontSize":"20px",
-			"iconWidth":"50px",
 			"list":[{
 				"pagePath":"pages/index/index",
 				"text":"首页",

@@ -11,20 +11,24 @@
     "code": "100"
   },
   "description": "",
-  "launch_path": "__uniapptabbar.html",
+  "launch_path": "__uniappview.html",
   "developer": {
     "name": "",
     "email": "",
     "url": ""
   },
   "permissions": {
+    "OAuth": {},
+    "Maps": {
+      "coordType": "gcj02"
+    },
     "UniNView": {
       "description": "UniNView原生渲染"
     }
   },
   "plus": {
     "useragent": {
-      "value": "uni-app appservice",
+      "value": "uni-app",
       "concatenate": true
     },
     "splashscreen": {
@@ -34,7 +38,11 @@
       "delay": 0
     },
     "popGesture": "close",
-    "launchwebview": {},
+    "launchwebview": {
+      "id": "1",
+      "kernel": "WKWebview",
+      "uni-app": "auto"
+    },
     "statusbar": {
       "immersed": "supportedDevice",
       "style": "light",
@@ -58,32 +66,36 @@
       },
       "google": {
         "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
           "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
           "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
           "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
-          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
           "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
-          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
           "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
           "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-          "<uses-feature android:name=\"android.hardware.camera\"/>",
-          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
         ]
       },
       "apple": {},
       "plugins": {
+        "maps": {},
+        "oauth": {},
         "audio": {
           "mp3": {
             "description": "Android平台录音支持MP3格式文件"
@@ -99,7 +111,7 @@
       }
     },
     "uni-app": {
-      "compilerVersion": "2.3.3",
+      "compilerVersion": "2.3.6",
       "control": "v8",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
@@ -107,13 +119,48 @@
         "flex-direction": "column"
       }
     },
-    "secondwebview": {
-      "id": "1",
-      "launch_path": "__uniappview.html",
-      "kernel": "WKWebview",
-      "mode": "child",
-      "top": 0,
-      "bottom": 56
+    "tabBar": {
+      "color": "#333333",
+      "selectedColor": "#FFD053",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "rgba(255,255,255,0.4)",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "/static/image/home.png",
+          "selectedIconPath": "/static/image/home-1.png"
+        },
+        {
+          "pagePath": "pages/category/category",
+          "text": "分类",
+          "iconPath": "/static/image/category.png",
+          "selectedIconPath": "/static/image/category-1.png"
+        },
+        {
+          "pagePath": "pages/exlist/exlist",
+          "text": "兑换列表",
+          "iconPath": "/static/image/exlist.png",
+          "selectedIconPath": "/static/image/exlist-1.png"
+        },
+        {
+          "pagePath": "pages/shopredeem/shopredeem",
+          "text": "购物车",
+          "iconPath": "/static/image/shopcart.png",
+          "selectedIconPath": "/static/image/shopcart-1.png"
+        },
+        {
+          "pagePath": "pages/my/my",
+          "text": "我的",
+          "iconPath": "/static/image/my.png",
+          "selectedIconPath": "/static/image/my-1.png"
+        }
+      ],
+      "height": "50px",
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
   }
 }
